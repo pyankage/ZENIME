@@ -21,21 +21,9 @@ async function loadAnime(keyword = "naruto") {
         });
 
     } catch (e) {
-        animeList.innerHTML = "<h2 style='color:red'>Gagal memuat anime.</h2>";
-        console.log(e);
-    }
+    animeList.innerHTML = `
+        <h2 style="color:red">Gagal memuat anime.</h2>
+        <p style="color:white">${e.message}</p>
+    `;
+    console.error(e);
 }
-
-loadAnime();
-
-search.addEventListener("keyup", () => {
-    const keyword = search.value.trim();
-
-    if (keyword.length >= 3) {
-        loadAnime(keyword);
-    }
-
-    if (keyword.length === 0) {
-        loadAnime();
-    }
-});
