@@ -1,0 +1,9 @@
+{
+  "name": "Zenime",
+  "short_name": "Zenime",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#7c3aed",
+  "icons": []
+}
